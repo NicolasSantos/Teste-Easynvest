@@ -1,0 +1,59 @@
+.table-container {
+    overflow-x: auto;
+    
+    table {
+        text-align: left;
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        
+        tr {
+            th, td {
+                border-bottom: 1px solid $table-border-color;
+                vertical-align: baseline;
+                padding-right: 15px;
+            }
+    
+            td {
+                &:last-child {
+                    min-width: 50px;
+                }
+    
+                a {
+                    padding: 0px 5px;
+                    
+                    &.save {
+                        i {
+                            color: $save-color;
+                        }
+                    }
+                    
+                    &.cancel {
+                        i {
+                            color: $cancel-color;
+                        }
+                    }
+                }
+            }
+        }
+        
+        tbody { 
+            tr {
+                &:hover {
+                    background-color: $table-hover-color;
+    
+                    input {
+                        color: $input-color;
+                        background-color: $table-hover-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    input {
+        width: initial;
+    }
+}
