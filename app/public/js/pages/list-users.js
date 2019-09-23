@@ -105,7 +105,8 @@ const onDeleteRow = ({target}) => {
     rowElement.remove();
     listUsers.splice(rowIndex, 1);
     localStorage.setItem('listUsers', JSON.stringify(listUsers));
-
+    
+    showToast("Usuário removido com sucesso!");
     updateRowDataIndex();
     hasAnyUser();
 }
@@ -253,11 +254,6 @@ const loadTable = () => {
         })
     }
 }
-
-const redirectToForm = () => {
-    window.location.href = "./index.html";
-}
-
 
 document.addEventListener("DOMContentLoaded", (event) => {
     loadTable();

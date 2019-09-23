@@ -22,4 +22,12 @@ npm run test
 
 Navegue até a pasta /app/pages/ e abra o arquivo index.html
 
-Há um menu de navegação para à tela de cadastro e listagem/edição. 
+## Solução
+
+Ao carregar a página index.html, será feito uma vericação para verificar se há dados no localStorage. A partir do momento que pegar os dados pela primeira vez, nunca será feita a requisição novamente até que você limpe seu localStorage.
+
+Há validação em todos campos tanto no cadastro quanto na edição. Não é criado um novo ou atualizado os dados até que todos os campos sejam validados. 
+
+Após criação, edição e remoção é exibido um toast no canto superior direito informando que a ação foi realiza com sucesso. 
+
+Ao clicar no botão de editar deve aparecer dois botões (um para salvar a lista e atualizar o localStorage e outro para cancelar que deverá ignorar tudo que foi digitado nos campos daquela linha e voltar ao estado anterior). Caso não tenha mais itens, a tabela será escondida e aparecerá uma mensagem informando que não há mais usuários na lista e um link para redirecionar à tela de cadastro.
